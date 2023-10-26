@@ -359,7 +359,7 @@ footer {
     color: white;
 }
 
-footer h1 {
+footer ~ h1 {
     padding-top: 20px;
     margin-left: 50px;
 }
