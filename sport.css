@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.719);
+    padding: 0 20px;
+}
+
+#logo {
+    color: rgb(235, 27, 27);
+    padding: 4px 8px;
+    font-size: 25px;
+    font-weight: bold;
+    /* text-shadow: 5px 5px 2px yellow; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#hamburger {
+    font-size: 20px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menubar {
+    padding: 3px 8px;
+    color: rgb(255, 255, 255);
+    /* background-color: red; */
+}
+
+.menubar:hover {
+    color: rgb(180, 180, 180);
+}
+
+@media screen and (max-width:600px) {
+    #hamburger {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+
+    header {
+        display: flex;
+    }
+
+    #logo {
+        position: absolute;
+        top: 0;
+        left: 20px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 0%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        background-color: blue;
+    }
+}
+
+.buynow {
+    padding: 4px 8px;
+    background-color: rgba(0, 255, 200, 0.39);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(0, 255, 200, 0.39);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buynow:hover {
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.home-page-back {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(beach.webp);
+    background-size: cover;
+
+}
+
+.home-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page .content {
+    text-align: center;
+    color: white;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-page .content h1 {
+    font-family: 'Thasadith', sans-serif;
+}
+
+.home-page .content p {
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+}
+
+.home-page .content button {
+    padding: 10px 10px;
+    margin: 50px 6px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Thasadith', sans-serif;
+    /* background-color: red; */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.home-page .content button:hover {
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+    box-shadow: 0 0 10px 2px white;
+    transition: 1s;
+}
+
+#ways {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+    cursor: pointer;
+}
+
+#ways:hover {
+    border: none;
+    box-shadow: 0 0 10px 2px white;
+}
+
+
+/* about pages */
+
+.about-back {
+    position: relative;
+    width: 100%;
+    height: 1200px;
+    background-image: url(image4.webp);
+    background-size: cover;
+    /* background-color: red; */
+}
+
+.about-page {
+    position: absolute;
+    width: 70%;
+    height: 900px;
+    /* background-color: blue; */
+    padding-top: 20px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.about-page h1 {
+    margin: 20px 0px;
+    text-shadow: -20px -15px 3px rgba(255, 255, 255, 0.26);
+}
+
+.about-page #pp {
+    font-weight: bold;
+    text-shadow: -20px -15px 3px rgba(255, 255, 255, 0.397);
+}
+
+.about-page .boxes .row1 {
+    height: 350px;
+    width: 100%;
+    display: inline-flex;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.about-page .boxes {
+    margin: 20px 0px;
+    position: relative;
+}
+
+.boxes .row1 #text1 p {
+    width: 100%;
+    height: 250px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.boxes .row1 #text1 .button button {
+    padding: 8px 12px;
+    /* background-color: red; */
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: none;
+    font-size: 11px;
+    box-shadow: 0 0 10px 1px;
+    cursor: pointer;
+}
+
+.boxes .row1 #text1 .button button:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+
+.about-page .boxes .row1 .box {
+    width: 350px;
+    height: 350px;
+    box-shadow: -10px -10px 5px 0.3px rgba(0, 0, 0, 0.705);
+    margin: 2px 2px;
+    background-color: rgba(255, 255, 255, 0.555);
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+#img1 {
+    background-image: url(image1.webp);
+    background-size: cover;
+    
+}
+
+.box:hover{
+    transform: scale(1.1);
+    border-radius: 2%;
+}
+
+#img2 {
+    background-image: url(image2.webp);
+    background-size: cover;
+}
+
+#img3 {
+    background-image: url(image3.webp);
+    background-size: cover;
+}
+
+#text1 {
+    text-align: center;
+    padding: 10px 30px;
+    overflow: hidden;
+}
+
+#p1 {
+    margin-top: 70px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.feedback {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: -100px;
+    background-color: blue;
+    background-image: url(winter.webp);
+    background-size: cover;
+
+}
+
+.c {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.c p {
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 15px 0px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+#email {
+    border: none;
+    background-color: white;
+    padding: 5px 0px;
+    width: 25em;
+    padding-left: 5px;
+    border-radius: 2px;
+    text-align: left;
+    box-shadow: 0 0 7px 3px rgb(0, 0, 0);
+}
+
+.c button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    margin-left: 5px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 7px 3px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.c button:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 0.5s;
+}
+
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-image: url(image3.webp);
+    background-size: cover;
+    color: white;
+}
+
+footer h1 {
+    padding-top: 20px;
+    margin-left: 50px;
+}
+
+.add {
+    margin-top: 10px;
+    margin-left: 50px;
+    /* color: rgb(41, 41, 41); */
+}
+
+.mailid {
+    margin-top: 50px;
+    margin-left: 50px;
+    float: left;
+    /* color: rgb(41, 41, 41); */
+}
+
+.d {
+    float: right;
+    margin-top: -100px;
+    margin-right: 100px;
+}
+
+.d h1 {
+    color: rgb(19, 19, 19);
+}
+
+.dc {
+    margin-top: 20px;
+    margin-left: 60px;
+    color: rgb(41, 41, 41);
+}
+
+.dc p {
+    margin: 5px;
+}
